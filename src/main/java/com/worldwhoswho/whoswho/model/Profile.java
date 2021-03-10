@@ -33,13 +33,7 @@ public class Profile {
     private String qualifications;
     private String nationality;
 
-
-   @Type( type = "List-array" )
-   @Column(
-           name = "profession",
-           columnDefinition = "varchar[]"
-   )
-    private List<String> profession = new LinkedList<>();
+    private String profession;
 
     private String presentPosition;
     private String nameAtBirth;
@@ -65,12 +59,13 @@ public class Profile {
     private String contactDetails;
     private String managementAddress;
 
-
     private int dead;
     private String gender;
     private String region;
-    @Column(name = "subregion")
     private String subRegion;
+
+    private String reference_id;
+    private String reference_name;
 
     public Long getId() {
         return id;
@@ -152,11 +147,11 @@ public class Profile {
         this.nationality = nationality;
     }
 
-    public List<String> getProfession() {
+    public String getProfession() {
         return profession;
     }
 
-    public void setProfession(List<String> profession) {
+    public void setProfession(String profession) {
         this.profession = profession;
     }
 
@@ -366,5 +361,21 @@ public class Profile {
 
     public void setSubRegion(String subRegion) {
         this.subRegion = subRegion;
+    }
+
+    public String getReference_id() {
+        return reference_id;
+    }
+
+    public void setReference_id(String reference_id) {
+        this.reference_id = reference_id;
+    }
+
+    public String getReference_name() {
+        return reference_name;
+    }
+
+    public void setReference_name(String reference_name) {
+        this.reference_name = reference_name;
     }
 }

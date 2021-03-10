@@ -12,4 +12,5 @@ public interface ProfileRepository extends JpaRepository<Profile, Long> {
     public List<Profile> findByIndexedNameStartsWith(String letter);
 
     Profile findByXmlId(String xmlId);
+    public List<Profile> findByIndexedNameStartsWithOrderByIndexedName(String letter);
 }

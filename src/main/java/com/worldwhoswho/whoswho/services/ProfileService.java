@@ -9,4 +9,7 @@ public interface ProfileService extends CrudService<Profile, Long>{
     Profile findByXmlId(String xmlId);
 
     List<Profile> findByIndexedNameStartsWith(String letter);
+
+    List<Profile> findByIndexedNameStartsWithOrderByIndexedName(String letter);
+
 }

@@ -34,6 +34,11 @@ public class ProfileServiceImpl implements ProfileService {
     }
 
     @Override
+    public List<Profile> findByIndexedNameStartsWithOrderByIndexedName(String letter) {
+        return profileRepository.findByIndexedNameStartsWithOrderByIndexedName(letter);
+    }
+
+    @Override
     public Profile findByXmlId(String xmlId) {
         return profileRepository.findByXmlId(xmlId);
     }
